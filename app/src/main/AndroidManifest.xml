@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BigBasket">
-        <activity android:name=".Delivery_sendotp"></activity>
+        <activity android:name=".Admin_Registration_item"></activity>
+        <activity android:name=".Allinone_Navigation" />
+        <activity android:name=".Delivery_sendotp" />
         <activity android:name=".DeliveryForgotPassword" />
         <activity android:name=".DeliveryPanel_BottomNavigation" />
         <activity android:name=".Delivery_VerifyPhone" />

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin_Registration_item"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/green"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Add Product"
+            android:textColor="@color/green"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="InvalidId">
+       <ImageView
+           android:id="@+id/ProductIcon"
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="20dp"
+           app:srcCompat="@drawable/ic_baseline_add_shopping_cart_24"
+
+           />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/ic_baseline_title"
+            android:drawableLeft="@drawable/ic_baseline_title"
+            android:hint="Title"
+            android:drawablePadding="10dp"
+            android:inputType="textPersonName|textCapWords"
+            android:layout_below="@+id/ProductIcon"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/ic_baseline_title"
+            android:drawableLeft="@drawable/ic_baseline_title"
+            android:hint="Description"
+            android:drawablePadding="10dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:layout_below="@+id/title"
+            />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/category"
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/ic_baseline_categories"
+            android:drawableLeft="@drawable/ic_baseline_categories"
+            android:hint="Category"
+            android:drawablePadding="10dp"
+            android:layout_below="@+id/description"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/quantity"
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/ic_baseline_shopping_cart_24"
+            android:drawableLeft="@drawable/ic_baseline_shopping_cart_24"
+            android:hint="Quantity e.g ,kg,g etc"
+            android:drawablePadding="10dp"
+            android:inputType="textCapWords"
+            android:layout_below="@+id/category"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Price"
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/ic_baseline_attach_money_24"
+            android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+            android:hint="Price"
+            android:drawablePadding="10dp"
+            android:inputType="numberDecimal"
+            android:layout_below="@+id/quantity"
+            />
+
+        <Button
+            android:id="@+id/AddProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Product"
+            android:layout_below="@+id/Price"
+            android:layout_centerHorizontal="true"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:minWidth="150dp"
+            android:layout_marginTop="5dp"
+            tools:ignore="UnknownId" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

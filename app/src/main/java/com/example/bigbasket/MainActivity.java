@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,25 +39,36 @@ public class MainActivity extends AppCompatActivity {
                     if(Fauth.getCurrentUser().isEmailVerified()){
                         Fauth=FirebaseAuth.getInstance();
 
+                        Intent i= new Intent(MainActivity.this,Allinone_Navigation.class);
+
                         databaseReference = FirebaseDatabase.getInstance().getReference("User").child(FirebaseAuth.getInstance().getUid()+"/Role");
                         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                                 String role = snapshot.getValue(String.class);
-                                if(role.equals("Chef")){
-                                    startActivity(new Intent(MainActivity.this,AdminPanel_BottomNavigation.class));
+                                Log.d( "onDataChange: ","Admin here");
+                                if(role.equals("Admin")){
+                                    i.putExtra("v1","Admin");
+                                    startActivity(i);
+
                                     finish();
 
                                 }
 
                                 if(role.equals("Customer")){
-                                    startActivity(new Intent(MainActivity.this,CustomerPanel_BottomNavigation.class));
+                                    i.putExtra("v1","Customer");
+                                    startActivity(i);
+                                    Log.d("intent as customer", "onDataChange: ");
+
                                     finish();
 
                                 }
 
                                 if(role.equals("DeliveryPerson")){
-                                    startActivity(new Intent(MainActivity.this,DeliveryPanel_BottomNavigation.class));
+                                    i.putExtra("v1","Delivery");
+                                    startActivity(i);
+
                                     finish();
 
                                 }

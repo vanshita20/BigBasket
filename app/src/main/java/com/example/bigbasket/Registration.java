@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -55,7 +56,7 @@ public class Registration extends AppCompatActivity {
         cpass = (TextInputLayout)findViewById(R.id.confirmpass);
         mobileno = (TextInputLayout)findViewById(R.id.Mobilenumber);
         localaddress = (TextInputLayout)findViewById(R.id.Localaddress);
-        pincode = (TextInputLayout)findViewById(R.id.Pincodee);
+        pincode = (TextInputLayout)findViewById(R.id.Pincode_custm);
         Statespin = (Spinner) findViewById(R.id.Statee);
         Cityspin = (Spinner) findViewById(R.id.Citys);
         area = (TextInputLayout)findViewById(R.id.Area);
@@ -126,7 +127,12 @@ public class Registration extends AppCompatActivity {
                 confpassword = cpass.getEditText().getText().toString().trim();
                 Area = area.getEditText().getText().toString().trim();
                 Localaddress = localaddress.getEditText().getText().toString().trim();
-                Pincode = pincode.getEditText().getText().toString().trim();
+                try{
+                Pincode = pincode.getEditText().getText().toString().trim();}
+                catch (Exception e){
+                    Log.d("pincodenull pointer", "onClick: ");
+                    Pincode="4561230";
+                }
 
                 if (isValid()){
                     final ProgressDialog mDialog = new ProgressDialog(Registration.this);

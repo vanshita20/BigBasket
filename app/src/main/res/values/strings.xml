@@ -10,4 +10,27 @@
     </string-array>
 
 
+    <string-array name="categories">
+        <item>Fruits </item>
+        <item>Vegetables </item>
+        <item>Dairy Product </item>
+        <item>Refined  Oil and Sauces</item>
+        <item> Cereal  </item>
+        <item>Beverages </item>
+        <item>Baking Goods</item>
+        <item>Household Supplies </item>
+        <item>Personal Care</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="app_name2">Navigation Drawer</string>
+
+    <!--to toggle the open close button
+        of the navigation drawer-->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+
 </resources>
