@@ -130,8 +130,7 @@ public class Registration extends AppCompatActivity {
                 try{
                 Pincode = pincode.getEditText().getText().toString().trim();}
                 catch (Exception e){
-                    Log.d("pincodenull pointer", "onClick: ");
-                    Pincode="4561230";
+
                 }
 
                 if (isValid()){
@@ -190,7 +189,7 @@ public class Registration extends AppCompatActivity {
 
                                                                     String phonenumber = Cpp.getSelectedCountryCodeWithPlus() + mobile;
                                                                     Intent b = new Intent(Registration.this,VerifyPhone.class);
-                                                                    b.putExtra("phonenumber",phonenumber);
+                                                                    b.putExtra("phonenumber_cust",phonenumber);
                                                                     startActivity(b);
 
                                                                 }

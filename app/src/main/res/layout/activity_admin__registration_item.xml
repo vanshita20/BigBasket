@@ -28,7 +28,10 @@
             android:textSize="30sp"
             android:textStyle="bold"/>
     </RelativeLayout>
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -117,6 +120,6 @@
             tools:ignore="UnknownId" />
 
     </RelativeLayout>
-
+</ScrollView>
 
 </LinearLayout>

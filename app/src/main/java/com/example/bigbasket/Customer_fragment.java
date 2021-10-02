@@ -3,62 +3,166 @@ package com.example.bigbasket;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Customer_fragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+
+
 public class Customer_fragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    RecyclerView Fruits,Vegetables,DairyProduct,RefinedOilandSauces,Cereal,Beverages,HouseholdSupplies,PersonalCare,BakingGoods;
+    private static Recycler_adapter adapterFruits,adapterVegetables,adapterDairyProduct,adapterRefinedOilandSauces,adapterCereal,adapterBeverages,adapterHouseholdSupplies,adapterPersonalCare,adapterBakingGoods;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
-    public Customer_fragment() {
-        // Required empty public constructor
-    }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Customer_fragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Customer_fragment newInstance(String param1, String param2) {
-        Customer_fragment fragment = new Customer_fragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    LinearLayoutManager HorizontalLayout1,HorizontalLayout2,HorizontalLayout3,HorizontalLayout4,HorizontalLayout5,HorizontalLayout6,HorizontalLayout7,HorizontalLayout8,HorizontalLayout9;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_customer_fragment, container, false);
+        View view=inflater.inflate(R.layout.fragment_customer_fragment, container, false);
+        //myOnClickListener = new MyOnClickListener(this);
+
+        Fruits = (RecyclerView) view.findViewById(R.id.Recycler_fruit);
+        Vegetables= (RecyclerView) view.findViewById(R.id.Recycler_Vegetables);
+        DairyProduct= (RecyclerView) view.findViewById(R.id.Recycler_DairyProduct);
+
+        RefinedOilandSauces= (RecyclerView) view.findViewById(R.id.Recycler_RefinedOilandSauces);
+        Cereal= (RecyclerView) view.findViewById(R.id.Recycler_Cereal);
+        Beverages= (RecyclerView) view.findViewById(R.id.Recycler_Beverages);
+        HouseholdSupplies= (RecyclerView) view.findViewById(R.id.Recycler_Householdsuppliments);
+        PersonalCare= (RecyclerView) view.findViewById(R.id.Recycler_PersonalCare);
+        BakingGoods= (RecyclerView) view.findViewById(R.id.Recycler_BakingGoods);
+        HorizontalLayout1 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        HorizontalLayout2 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        HorizontalLayout3 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        HorizontalLayout4 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        HorizontalLayout5 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        HorizontalLayout6 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        HorizontalLayout7 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        HorizontalLayout8 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+        HorizontalLayout9 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
+
+
+        Fruits.setLayoutManager(HorizontalLayout1);
+        Vegetables.setLayoutManager(HorizontalLayout2);
+        DairyProduct.setLayoutManager(HorizontalLayout3);
+        RefinedOilandSauces.setLayoutManager(HorizontalLayout4);
+        Cereal.setLayoutManager(HorizontalLayout5);
+        Beverages.setLayoutManager(HorizontalLayout6);
+        HouseholdSupplies.setLayoutManager(HorizontalLayout7);
+        PersonalCare.setLayoutManager(HorizontalLayout8);
+        BakingGoods.setLayoutManager(HorizontalLayout9);
+
+
+
+
+
+        FirebaseRecyclerOptions<Model> optionsFruits =
+                new FirebaseRecyclerOptions.Builder<Model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("product").child("Fruits"), Model.class)
+                        .build();
+        adapterFruits=new Recycler_adapter(optionsFruits);
+        Fruits.setAdapter(adapterFruits);
+        FirebaseRecyclerOptions<Model> optionsVegetables =
+                new FirebaseRecyclerOptions.Builder<Model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("product").child("Vegetables"), Model.class)
+                        .build();
+        adapterVegetables=new Recycler_adapter(optionsVegetables);
+        Vegetables.setAdapter(adapterVegetables);
+        FirebaseRecyclerOptions<Model> optionsDairyProduct =
+                new FirebaseRecyclerOptions.Builder<Model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("product").child("Dairy Product"), Model.class)
+                        .build();
+        adapterDairyProduct=new Recycler_adapter(optionsDairyProduct);
+        DairyProduct.setAdapter(adapterDairyProduct);
+
+        FirebaseRecyclerOptions<Model> optionsRefinedOilandSauces =
+                new FirebaseRecyclerOptions.Builder<Model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("product").child("Refined Oil and Sauces"), Model.class)
+                        .build();
+        adapterRefinedOilandSauces=new Recycler_adapter(optionsRefinedOilandSauces);
+        RefinedOilandSauces.setAdapter(adapterRefinedOilandSauces);
+        FirebaseRecyclerOptions<Model> optionsCereal =
+                new FirebaseRecyclerOptions.Builder<Model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("product").child("Cereal"), Model.class)
+                        .build();
+        adapterCereal=new Recycler_adapter(optionsCereal);
+        Cereal.setAdapter(adapterCereal);
+        FirebaseRecyclerOptions<Model> optionsBeverages =
+                new FirebaseRecyclerOptions.Builder<Model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("product").child("Beverages"), Model.class)
+                        .build();
+        adapterBeverages=new Recycler_adapter(optionsBeverages);
+        Beverages.setAdapter(adapterBeverages);
+        FirebaseRecyclerOptions<Model> optionsPersonalCare =
+                new FirebaseRecyclerOptions.Builder<Model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("product").child("Personal Care"), Model.class)
+                        .build();
+        adapterPersonalCare=new Recycler_adapter(optionsPersonalCare);
+        PersonalCare.setAdapter(adapterPersonalCare);
+        FirebaseRecyclerOptions<Model> optionsBakingGoods =
+                new FirebaseRecyclerOptions.Builder<Model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("product").child("Baking Goods"), Model.class)
+                        .build();
+        adapterBakingGoods=new Recycler_adapter(optionsBakingGoods);
+        BakingGoods.setAdapter(adapterBakingGoods);
+        FirebaseRecyclerOptions<Model> optionsHouseholdSupplies =
+                new FirebaseRecyclerOptions.Builder<Model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("product").child("Household Supplies"), Model.class)
+                        .build();
+        adapterHouseholdSupplies=new Recycler_adapter(optionsHouseholdSupplies);
+        HouseholdSupplies.setAdapter(adapterHouseholdSupplies);
+        return view;
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        adapterFruits.startListening();
+        adapterVegetables.startListening();
+        adapterDairyProduct.startListening();
+        adapterRefinedOilandSauces.startListening();
+        adapterCereal.startListening();
+        adapterBeverages.startListening();
+        adapterHouseholdSupplies.startListening();
+        adapterPersonalCare.startListening();
+        adapterBakingGoods.startListening();
+
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapterFruits.stopListening();
+
+        adapterVegetables.stopListening();
+        adapterDairyProduct.stopListening();
+        adapterRefinedOilandSauces.stopListening();
+        adapterCereal.stopListening();
+        adapterBeverages.stopListening();
+        adapterHouseholdSupplies.stopListening();
+        adapterPersonalCare.stopListening();
+        adapterBakingGoods.stopListening();
     }
 }
+ /*    */
+ /*
+
+*/
+ /*Vegetables.setLayoutManager(HorizontalLayout)
+        ;DairyProduct.setLayoutManager(HorizontalLayout);
+        RefinedOilandSauces.setLayoutManager(HorizontalLayout);
+        Cereal.setLayoutManager(HorizontalLayout);
+        Beverages.setLayoutManager(HorizontalLayout);
+        HouseholdSupplies.setLayoutManager(HorizontalLayout);
+        PersonalCare.setLayoutManager(HorizontalLayout);
+        BakingGoods.setLayoutManager(HorizontalLayout);*/

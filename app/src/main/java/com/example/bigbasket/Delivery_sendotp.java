@@ -38,7 +38,7 @@ public class Delivery_sendotp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery_sendotp);
 
-        phoneno = getIntent().getStringExtra("Phonenum").trim();
+        phoneno = getIntent().getStringExtra("phonenumber_del").trim();
 
         entercode = (EditText) findViewById(R.id.code1);
         txt = (TextView) findViewById(R.id.text1);

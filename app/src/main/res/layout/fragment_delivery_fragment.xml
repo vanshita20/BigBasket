@@ -6,9 +6,11 @@
     tools:context=".Delivery_fragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Delivery fragment" />
 
+        android:id="@+id/delivery_recycler"
+        />
 </FrameLayout>

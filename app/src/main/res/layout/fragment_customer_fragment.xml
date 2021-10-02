@@ -8,127 +8,118 @@
     tools:context=".Customer_fragment">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/search_box"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:text="fruit"/>
 
-            android:drawableLeft="@drawable/ic_baseline_search_24"
-            android:drawablePadding="5dp"
-            android:hint="Seach your item here...."
-            android:padding="13dp" />
-        <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Popular Products"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/view_all_popular"
-                android:layout_weight="1"
-                android:text="view ALL"
-                android:gravity="end"
-                android:layout_marginRight="7dp"
-                android:textSize="16dp"
-                android:textColor="@color/green"/>
-        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:id="@+id/pop_rec" />
-
-
-        <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:scrollbars="horizontal"
+            android:id="@+id/Recycler_fruit"
+            />
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Explore Products"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/view_all_explore"
-                android:layout_weight="1"
-                android:text="view ALL"
-                android:gravity="end"
-                android:layout_marginRight="7dp"
-                android:textSize="16dp"
-                android:textColor="@color/green"/>
-        </LinearLayout>
+            android:text="Vegetables"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:id="@+id/Recycler_Vegetables"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dairy Product"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:id="@+id/Recycler_DairyProduct"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Refined  Oil and Sauces"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:id="@+id/explore_rec" />
-
-
-        <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:scrollbars="horizontal"
+            android:id="@+id/Recycler_RefinedOilandSauces"
+            />
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="recommended Products"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/view_all_recommended"
-                android:layout_weight="1"
-                android:text="view ALL"
-                android:gravity="end"
-                android:layout_marginRight="7dp"
-                android:textSize="16dp"
-                android:textColor="@color/green"/>
-        </LinearLayout>
-
+            android:text="Women care"/>
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:id="@+id/pop_recommended" />
+            android:scrollbars="horizontal"
+            android:id="@+id/Recycler_womencare"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cereal"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:id="@+id/Recycler_Cereal"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Beverages"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:id="@+id/Recycler_Beverages"
+            />
 
 
 
-
-
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HouseholdSuppliments"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:id="@+id/Recycler_Householdsuppliments"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PersonalCare"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:id="@+id/Recycler_PersonalCare"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BakingGoods"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            android:id="@+id/Recycler_BakingGoods"
+            />
     </LinearLayout>
-
 
 
 </ScrollView>

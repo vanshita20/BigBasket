@@ -8,7 +8,7 @@
     tools:context=".Allinone_Navigation">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:background="@color/green"
+        android:background="#264A02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
@@ -39,6 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:id="@+id/nav_daw"
         app:menu="@menu/navigation_menu" />
     </androidx.drawerlayout.widget.DrawerLayout>
 

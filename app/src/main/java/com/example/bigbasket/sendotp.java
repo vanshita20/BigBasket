@@ -38,7 +38,7 @@ public class sendotp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sendotp);
 
-        phoneno = getIntent().getStringExtra("Phonenumber").trim();
+        phoneno = getIntent().getStringExtra("phonenumber_cust").trim();
 
         entercode = (EditText) findViewById(R.id.code);
         txt = (TextView) findViewById(R.id.text);

@@ -39,7 +39,7 @@ public class VerifyPhone extends AppCompatActivity {
         setContentView(R.layout.activity_verify_phone);
 
 
-        phoneno = getIntent().getStringExtra("phonenumber").trim();
+        phoneno = getIntent().getStringExtra("phonenumber_cust").trim();
 
         entercode = (EditText) findViewById(R.id.codee);
         txt = (TextView) findViewById(R.id.text);

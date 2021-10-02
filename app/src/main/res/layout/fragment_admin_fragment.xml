@@ -5,26 +5,112 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Admin_fragment">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:id="@+id/Recycler_admin_fruit"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:id="@+id/Recycler_admin_Vegetables"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:id="@+id/Recycler_admin_DairyProduct"
+                />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:id="@+id/Recycler_admin_RefinedOilandSauces"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:id="@+id/Recycler_admin_womencare"
+                />
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:id="@+id/Recycler_admin_Cereal"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:id="@+id/Recycler_admin_Beverages"
+                />
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:id="@+id/Recycler_admin_Householdsuppliments"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:id="@+id/Recycler_admin_PersonalCare"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:id="@+id/Recycler_admin_BakingGoods"
+                />
+        </LinearLayout>
+
+        </ScrollView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:id="@+id/floting_add"
+      android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="500dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginLeft="300dp"
-        android:backgroundTint="@color/green"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:baselineAlignBottom="true"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#198C00"
+
         app:srcCompat="@drawable/add"
         tools:ignore="MissingConstraints" />
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </FrameLayout>
