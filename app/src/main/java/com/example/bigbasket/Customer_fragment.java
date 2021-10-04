@@ -88,7 +88,7 @@ public class Customer_fragment extends Fragment {
 
         FirebaseRecyclerOptions<Model> optionsRefinedOilandSauces =
                 new FirebaseRecyclerOptions.Builder<Model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("product").child("Refined Oil and Sauces"), Model.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("product").child("Refined  Oil and Sauces"), Model.class)
                         .build();
         adapterRefinedOilandSauces=new Recycler_adapter(optionsRefinedOilandSauces);
         RefinedOilandSauces.setAdapter(adapterRefinedOilandSauces);
