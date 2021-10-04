@@ -38,7 +38,7 @@ public class admin_Recycler_adapter extends FirebaseRecyclerAdapter<Model, admin
             @Override
             public void onClick(View view) {
                 AppCompatActivity activity=(AppCompatActivity)view.getContext();
-                Intent inti=new Intent(activity,Confirm_order.class);
+                Intent inti=new Intent(activity,See_product.class);
                 inti.putExtra("name",model.getName());
 
                 inti.putExtra("imageURL",model.getImageURL());
