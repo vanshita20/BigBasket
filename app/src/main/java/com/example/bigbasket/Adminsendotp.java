@@ -179,7 +179,7 @@ public class Adminsendotp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if(task.isSuccessful()){
-                            startActivity(new Intent(Adminsendotp.this,AdminPanel_BottomNavigation.class));
+                            startActivity(new Intent(Adminsendotp.this,Allinone_Navigation.class).putExtra("v1","Admin"));
                             finish();
 
                         }else{

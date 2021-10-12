@@ -67,7 +67,8 @@ public class Adminlogin extends AppCompatActivity {
                                     if(Fauth.getCurrentUser().isEmailVerified()){
                                         mDialog.dismiss();
                                         Toast.makeText(Adminlogin.this, "Congratulation! You Have Successfully Login", Toast.LENGTH_SHORT).show();
-                                        Intent Z = new Intent(Adminlogin.this,AdminPanel_BottomNavigation.class);
+                                        Intent Z = new Intent(Adminlogin.this,Allinone_Navigation.class);
+                                        Z.putExtra("v1","Admin");
                                         startActivity(Z);
                                         finish();
 

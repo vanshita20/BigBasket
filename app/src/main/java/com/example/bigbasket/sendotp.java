@@ -176,7 +176,7 @@ public class sendotp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if(task.isSuccessful()){
-                            startActivity(new Intent(sendotp.this,CustomerPanel_BottomNavigation.class));
+                            startActivity(new Intent(sendotp.this,Allinone_Navigation.class).putExtra("v1","Customer"));
                             finish();
 
                         }else{

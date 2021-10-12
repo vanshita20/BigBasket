@@ -179,7 +179,7 @@ public class Delivery_sendotp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if(task.isSuccessful()){
-                            startActivity(new Intent(Delivery_sendotp.this,DeliveryPanel_BottomNavigation.class));
+                            startActivity(new Intent(Delivery_sendotp.this,Allinone_Navigation.class).putExtra("v1","Delivery"));
                             finish();
 
                         }else{

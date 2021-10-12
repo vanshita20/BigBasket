@@ -42,6 +42,7 @@ public class Allinone_Navigation extends AppCompatActivity  implements Navigatio
         setContentView(R.layout.activity_allinone__navigation);
          Bundle extras = getIntent().getExtras();
          flag= extras.getString("v1");
+
         toolbar=(Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -91,6 +92,13 @@ public class Allinone_Navigation extends AppCompatActivity  implements Navigatio
 
         if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
             return true;
+        }
+        if(item.getItemId()==R.id.Logout){
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(Allinone_Navigation.this, MainMenu.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         }
         return super.onOptionsItemSelected(item);
 
