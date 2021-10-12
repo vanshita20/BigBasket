@@ -154,15 +154,3 @@ public class Customer_fragment extends Fragment {
         adapterBakingGoods.stopListening();
     }
 }
- /*    */
- /*
-
-*/
- /*Vegetables.setLayoutManager(HorizontalLayout)
-        ;DairyProduct.setLayoutManager(HorizontalLayout);
-        RefinedOilandSauces.setLayoutManager(HorizontalLayout);
-        Cereal.setLayoutManager(HorizontalLayout);
-        Beverages.setLayoutManager(HorizontalLayout);
-        HouseholdSupplies.setLayoutManager(HorizontalLayout);
-        PersonalCare.setLayoutManager(HorizontalLayout);
-        BakingGoods.setLayoutManager(HorizontalLayout);*/

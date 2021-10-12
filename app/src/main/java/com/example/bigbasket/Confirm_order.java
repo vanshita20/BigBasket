@@ -93,7 +93,7 @@ order.setText(product_price+"-/rs");
                 cust_area=snapshot.child(uid).child("area").getValue(String.class);
                 cust_city=snapshot.child(uid).child("City").getValue(String.class);
                 cust_state=snapshot.child(uid).child("State").getValue(String.class);
-                cust_pincode=snapshot.child(uid).child("Password").getValue(String.class);
+                cust_pincode=snapshot.child(uid).child("Pincode").getValue(String.class);
 
 
 

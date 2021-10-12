@@ -1,6 +1,7 @@
 package com.example.bigbasket;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,8 @@ public class Cart_Recycler_adapter extends FirebaseRecyclerAdapter<Cart_model,Ca
      *
      * @param options
      */
+
+    int p=0;
     public Cart_Recycler_adapter(@NonNull FirebaseRecyclerOptions<Cart_model> options) {
         super(options);
     }
@@ -32,6 +35,9 @@ public class Cart_Recycler_adapter extends FirebaseRecyclerAdapter<Cart_model,Ca
         myholder.name_text.setText(cart_model.getProduct_name());
         myholder.price_text.setText(cart_model.getProduct_price());
         Glide.with(myholder.img_view.getContext()).load(cart_model.getImageURL()).into(myholder.img_view);
+        Log.d("onBindViewHolder: ",String.valueOf(p));
+        p+=Integer.parseInt(cart_model.getProduct_price());
+
         myholder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

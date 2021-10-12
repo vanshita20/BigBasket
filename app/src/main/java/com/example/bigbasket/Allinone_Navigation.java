@@ -128,7 +128,7 @@ public class Allinone_Navigation extends AppCompatActivity  implements Navigatio
             Intent intent = new Intent(Allinone_Navigation.this, MainMenu.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
-
+finish();
         }
 
         DrawerLayout drawer = findViewById(R.id.my_drawer_layout);

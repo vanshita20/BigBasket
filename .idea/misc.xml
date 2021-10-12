@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Aap/BigBasket/app/src/main/res/layout/activity_admin__registration_item.xml" value="0.1" />
+        <entry key="..\:/Aap/BigBasket/app/src/main/res/layout/activity_admin_registration.xml" value="0.1716485507246377" />
         <entry key="..\:/Aap/BigBasket/app/src/main/res/layout/activity_allinone__navigation.xml" value="0.20416666666666666" />
-        <entry key="..\:/Aap/BigBasket/app/src/main/res/layout/activity_cart_page.xml" value="0.20416666666666666" />
+        <entry key="..\:/Aap/BigBasket/app/src/main/res/layout/activity_cart_page.xml" value="0.33" />
+        <entry key="..\:/Aap/BigBasket/app/src/main/res/layout/activity_choose_one.xml" value="0.1716485507246377" />
         <entry key="..\:/Aap/BigBasket/app/src/main/res/layout/activity_confirm_order.xml" value="0.19010416666666666" />
         <entry key="..\:/Aap/BigBasket/app/src/main/res/layout/activity_see_product.xml" value="0.18070652173913043" />
         <entry key="..\:/Aap/BigBasket/app/src/main/res/layout/fragment_admin_fragment.xml" value="0.16983695652173914" />
